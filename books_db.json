@@ -1,0 +1,84 @@
+{
+    "1": {
+        "book_id": "1",
+        "book_title": "123",
+        "book_author": "123",
+        "book_year": "123",
+        "book_status": "в наличии"
+    },
+    "2": {
+        "book_id": "2",
+        "book_title": "123",
+        "book_author": "123",
+        "book_year": "123",
+        "book_status": "в наличии"
+    },
+    "3": {
+        "book_id": "3",
+        "book_title": "12345",
+        "book_author": "12345",
+        "book_year": "12345",
+        "book_status": "в наличии"
+    },
+    "4": {
+        "book_id": "4",
+        "book_title": "123",
+        "book_author": "123",
+        "book_year": "123",
+        "book_status": "в наличии"
+    },
+    "5": {
+        "book_id": "5",
+        "book_title": "123",
+        "book_author": "123",
+        "book_year": "123",
+        "book_status": "в наличии"
+    },
+    "6": {
+        "book_id": "6",
+        "book_title": "123",
+        "book_author": "123",
+        "book_year": "123",
+        "book_status": "в наличии"
+    },
+    "7": {
+        "book_id": "7",
+        "book_title": "123",
+        "book_author": "123",
+        "book_year": "123",
+        "book_status": "в наличии"
+    }
+}  }
+}{
+    "1": {
+        "book_id": "1",
+        "book_title": "123",
+        "book_author": "123",
+        "book_year": "123",
+        "book_status": "в наличии"
+    }
+}{
+    "1": {
+        "book_id": "1",
+        "book_title": "123",
+        "book_author": "123",
+        "book_year": "123",
+        "book_status": "в наличии"
+    }
+}{
+    "1": {
+        "book_id": "1",
+        "book_title": "123",
+        "book_author": "123",
+        "book_year": "123",
+        "book_status": "в наличии"
+    }
+}{
+    "1": {
+        "book_id": "1",
+        "book_title": "123",
+        "book_author": "123",
+        "book_year": "123",
+        "book_status": "в наличии"
+    }
+}
