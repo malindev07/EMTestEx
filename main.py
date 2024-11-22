@@ -1,13 +1,21 @@
-from last_id import get_last_id
-from route_actions import RouteBookAction
-from settings import action_with_books, last_id
+from books_repo.book_storage import BookStorage
+from settings.commands import Commands
+
+from router.route_actions import RouteBookAction
+from settings.settings import Settings
 
 if __name__ == "__main__":
-    last_id["id"] = get_last_id()
+    book_storage = BookStorage()
+    book_storage.get_storage()
+    router = RouteBookAction(book_storage=book_storage)
 
     while True:
         print("Выберите номер команды:")
-        for num, action in action_with_books.items():
-            print(f"{num} - {action}")
-        action_num = input("Введите номер команды: ")
-        RouteBookAction.route_action(action_num)
+
+        Settings.display_actions()
+
+        try:
+            action_num = Commands(input("Введите номер команды: "))
+            router.route_action(action_num)
+        except ValueError:
+            print(f"Такой команды не существует, введите корректный номер\n")

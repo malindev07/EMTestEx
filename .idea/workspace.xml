@@ -4,23 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50fccfb5-f902-4853-9e4f-986b8b479fa3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/EMTestEx.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book_model.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/books_db.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/convert_class_to_dict.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/crud.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/last_id.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/route_actions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/update_db.py" afterDir="false" />
+    <list default="true" id="50fccfb5-f902-4853-9e4f-986b8b479fa3" name="Changes" comment="Реализована функция доавбления книги в БД">
+      <change afterPath="$PROJECT_DIR$/book_storage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/commands.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/books_db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/book_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books_db.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/crud.py" beforeDir="false" afterPath="$PROJECT_DIR$/crud.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/last_id.py" beforeDir="false" afterPath="$PROJECT_DIR$/last_id.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/route_actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/route_actions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,11 +33,34 @@
     <option name="myRunOnSave" value="true" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
+    {
+      &quot;state&quot;: &quot;OPEN&quot;,
+      &quot;reviewState&quot;: &quot;AWAITING_REVIEW&quot;
+    }
+  ],
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;reviewState&quot;: &quot;AWAITING_REVIEW&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/malindev07/EMTestEx.git&quot;,
+    &quot;accountId&quot;: &quot;b48d54f4-9848-46cd-a66b-309cd2a176f7&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2pAKAtLnPN1npZj8qnSn5A0AP69" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -51,15 +69,27 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.BookStorage.executor": "Run",
     "Python.book_model.executor": "Run",
     "Python.crud.executor": "Run",
     "Python.last_id.executor": "Run",
     "Python.main.executor": "Run",
+    "Python.settings.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "settings.editor.selected.configurable": "actions.on.save"
+  },
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory"
+    ]
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\PythonTrainDir\EMTestEx\db" />
+    </key>
+  </component>
   <component name="RunManager" selected="Python.main">
     <configuration name="book_model" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="EMTestEx" />
@@ -75,6 +105,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/book_model.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="book_storage" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="EMTestEx" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\PythonTrainDir\EMTestEx\book_storage.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -149,11 +201,35 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="settings" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="EMTestEx" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/settings.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.crud" />
-        <item itemvalue="Python.last_id" />
         <item itemvalue="Python.book_model" />
+        <item itemvalue="Python.book_storage" />
+        <item itemvalue="Python.settings" />
+        <item itemvalue="Python.last_id" />
+        <item itemvalue="Python.crud" />
       </list>
     </recent_temporary>
   </component>
@@ -173,6 +249,51 @@
       <option name="presentableId" value="Default" />
       <updated>1732203299961</updated>
     </task>
+    <task id="LOCAL-00001" summary="Реализована функция доавбления книги в БД">
+      <option name="closed" value="true" />
+      <created>1732217569712</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1732217569712</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Реализована функция доавбления книги в БД">
+      <option name="closed" value="true" />
+      <created>1732217665477</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732217665477</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Реализована функция доавбления книги в БД">
+      <option name="closed" value="true" />
+      <created>1732217824725</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732217824725</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Реализована функция доавбления книги в БД" />
+    <option name="LAST_COMMIT_MESSAGE" value="Реализована функция доавбления книги в БД" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/crud.py</url>
+          <line>54</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/book_model.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
