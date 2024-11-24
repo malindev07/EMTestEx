@@ -24,16 +24,16 @@ class RouteBookAction:
                     self.actions_book.add_book()
 
                 case Commands.DELETE_BOOK:
-                    pass
+                    self.actions_book.delete_book()
 
                 case Commands.FIND_BOOK:
-                    pass
+                    self.actions_book.find_book()
 
                 case Commands.SHOW_BOOKS:
-                    pass
+                    self.actions_book.show_books()
 
                 case Commands.CHANGE_BOOK_STATUS:
-                    pass
+                    self.actions_book.change_book_status()
 
         # Если пользователь вводит не существующий номер команды
         except ValueError:

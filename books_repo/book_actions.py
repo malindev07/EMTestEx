@@ -1,16 +1,15 @@
-import json
 from dataclasses import dataclass, asdict
 
 from books_repo.book_storage import BookStorage
-from books_repo.book_model import Book
+from books_repo.book_model import Book, BookStatus
 
 
 @dataclass
 class ActionBook:
     book_storage: BookStorage
 
-    # Добавление книги в базу
-    def add_book(self) -> Book | bool:
+    # Добавление книги
+    def add_book(self) -> None:
         new_book = Book(
             book_title=input("Введите название книги: "),
             book_author=input("Введите автора книги: "),
@@ -24,40 +23,74 @@ class ActionBook:
             self.book_storage.storage[new_book.book_id] = asdict(new_book)
             self.book_storage.set_storage()
             print("Книга " + new_book.book_title + " добавлена!\n")
-            return new_book
 
         except (KeyError, ValueError):
             print("Ошибка! Автор и название не могут быть пустыми!")
-            return False
 
-        # # path
-        # with open("db/books_db.json", "r+", encoding="utf-8") as f:
-        #     try:
-        #         books: dict = json.loads(f.read())
-        #
-        #         books.update(class_to_dict(book))
-        #
-        #         f.seek(0)
-        #
-        #         update_db(obj=books, file=f)
-        #         return True
-        #     except ValueError:
-        #         update_db(obj=class_to_dict(book), file=f)
+    # Удаление книги по id
+    def delete_book(
+        self,
+    ) -> None:
+        try:
+            book_id: str = input("Введите id книги: ")
+            self.book_storage.storage.pop(book_id)
+            print(f"Книга с id {book_id} удалена!")
+            self.book_storage.set_storage()
+        except KeyError:
+            print(f"Книга с id {book_id} не найдена!")
 
-        # return f"Книга {book.book_title} добавлена!\n"
+    # Поиск книги по автору, названию или году выпуска
+    def find_book(self) -> None:
+        try:
+            book_for_find: str = input("Введите название, автора или год книги: ")
+            coincidence: bool = False
+            print(f"Книга по запросу {book_for_find}")
 
-    @classmethod
-    def delete_book(cls, book_id: str) -> str:
-        with open("../db/books_db.json", "r+", encoding="utf-8") as f:
-            try:
-                books: dict = json.loads(f.read())
+            for book in self.book_storage.storage.values():
+                for item in book:
+                    if book[item] == book_for_find:
+                        print(
+                            f"Название книги - {book['book_title']}, id книги - {book['book_id']} "
+                        )
 
-                books.pop(book_id)
+                        coincidence = True
+                        break
+            if not coincidence:
+                print("Книга не найдена\n")
+        except ValueError:
+            print("Недопустимое значение для полей название, автор, год.")
 
-                f.seek(0)
+    # Отображение всех книг
+    def show_books(self):
+        for book in self.book_storage.storage.values():
+            print(
+                f"id книги: {book['book_id']}, название книги: "
+                f"{book['book_title']}, автор книги: {book['book_author']}, год издания: {book['book_year']}, статус книги: "
+                f"{book['book_status']}"
+            )
+        print("\n")
 
-                update_db(obj=books, file=f)
+    # Изменение статуса книги
+    def change_book_status(self):
+        book_id: str = input("Введите id книги: ")
 
-                return f"Книга с id {book_id} {books[book_id]['book_title']} удалена."
-            except KeyError:
-                print("Key")
+        try:
+            if (
+                self.book_storage.storage[book_id]["book_status"]
+                == BookStatus.AVAILIBALE
+            ):
+                self.book_storage.storage[book_id].update(
+                    book_status=BookStatus.NOT_AVAILIBALE
+                )
+            else:
+                self.book_storage.storage[book_id].update(
+                    book_status=BookStatus.AVAILIBALE
+                )
+
+            self.book_storage.set_storage()
+            print(
+                f"Статус книги с id {book_id} изменен! Текущий статус - {self.book_storage.storage[book_id]['book_status']}\n"
+            )
+
+        except KeyError:
+            print(f"Книга c id {book_id} не найдена. \n")

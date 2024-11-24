@@ -26,5 +26,4 @@ class Book:
     book_author: str
     book_year: str
     book_status: BookStatus = field(default=BookStatus.AVAILIBALE)
-    # book_status: Literal["в наличии", "выдана"] = field(default="в наличии")
     book_id: str = field(default_factory=lambda: str(uuid4()))
