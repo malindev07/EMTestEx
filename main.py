@@ -6,7 +6,11 @@ from settings.settings import Settings
 
 if __name__ == "__main__":
     book_storage = BookStorage()
+
+    # Получаем бд при старте приложения
     book_storage.get_storage()
+
+    # Маршрутизатор для навигации по приложению
     router = RouteBookAction(book_storage=book_storage)
 
     while True:
@@ -17,5 +21,6 @@ if __name__ == "__main__":
         try:
             action_num = Commands(input("Введите номер команды: "))
             router.route_action(action_num)
+
         except ValueError:
             print(f"Такой команды не существует, введите корректный номер\n")

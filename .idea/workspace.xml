@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="50fccfb5-f902-4853-9e4f-986b8b479fa3" name="Changes" comment="Переделана структура проекта, добавлены датаклассы">
+    <list default="true" id="50fccfb5-f902-4853-9e4f-986b8b479fa3" name="Changes" comment="Добавлены функции удаление книги, поиск книги, отображение книг и изменение статуса книги">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/books_repo/book_actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/books_repo/book_actions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/books_repo/book_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/books_repo/book_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books_repo/book_storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/books_repo/book_storage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/books_db.json" beforeDir="false" afterPath="$PROJECT_DIR$/db/books_db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/route_actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/router/route_actions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -280,23 +281,21 @@
       <option name="project" value="LOCAL" />
       <updated>1732316525077</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Добавлены функции удаление книги, поиск книги, отображение книг и изменение статуса книги">
+      <option name="closed" value="true" />
+      <created>1732484066547</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732484066547</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Реализована функция доавбления книги в БД" />
     <MESSAGE value="Переделана структура проекта, добавлены датаклассы" />
-    <option name="LAST_COMMIT_MESSAGE" value="Переделана структура проекта, добавлены датаклассы" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/books_repo/book_model.py</url>
-          <line>16</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Добавлены функции удаление книги, поиск книги, отображение книг и изменение статуса книги" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлены функции удаление книги, поиск книги, отображение книг и изменение статуса книги" />
   </component>
 </project>

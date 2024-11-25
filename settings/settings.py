@@ -13,6 +13,7 @@ class Settings:
         "5": "Изменение статуса книги",
     }
 
+    # Отображение всех возможных команд
     @classmethod
     def display_actions(cls):
         for num, action in cls.action_with_books.items():

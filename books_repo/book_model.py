@@ -3,17 +3,6 @@ from uuid import uuid4
 from enum import StrEnum
 
 
-# @dataclass
-# class BookId:
-#     book_id: str = ""
-#
-#     @staticmethod
-#     def set_book_id():
-#         book_id: str = str(last_id["id"])
-#         last_id["id"] += 1
-#         return book_id
-
-
 class BookStatus(StrEnum):
     AVAILIBALE = "в наличии"
     NOT_AVAILIBALE = "выдана"

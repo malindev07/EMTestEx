@@ -1,37 +1,51 @@
 {
-    "d3f8a070-7d24-4173-af88-947269ef1bcc": {
-        "book_title": "123123123",
-        "book_author": "123123123",
-        "book_year": "123123123",
+    "be7f8f53-45b5-418f-80f1-22fa37019572": {
+        "book_title": "Война и мир",
+        "book_author": "Л.Н. Толстой",
+        "book_year": "1863",
+        "book_status": "в наличии",
+        "book_id": "be7f8f53-45b5-418f-80f1-22fa37019572"
+    },
+    "8f719375-80dd-40ac-a0bb-b1d55d68b003": {
+        "book_title": "Преступление и наказание",
+        "book_author": "Ф.М. Достоевский",
+        "book_year": "1865",
+        "book_status": "в наличии",
+        "book_id": "8f719375-80dd-40ac-a0bb-b1d55d68b003"
+    },
+    "7a9ef73c-616c-4565-ba4b-c8b5377295b9": {
+        "book_title": "Судьба человека",
+        "book_author": "М.А. Шолохов",
+        "book_year": "1956",
+        "book_status": "в наличии",
+        "book_id": "7a9ef73c-616c-4565-ba4b-c8b5377295b9"
+    },
+    "536bb8a7-58d1-40d9-865d-28de86ea7e19": {
+        "book_title": "Война и мир",
+        "book_author": "Л.Н. Толстой",
+        "book_year": "1863",
+        "book_status": "в наличии",
+        "book_id": "536bb8a7-58d1-40d9-865d-28de86ea7e19"
+    },
+    "a8443e8d-0a91-4360-b9db-dfad2dd8261b": {
+        "book_title": "Идиот",
+        "book_author": "Ф.М. Достоевский",
+        "book_year": "1868",
+        "book_status": "в наличии",
+        "book_id": "a8443e8d-0a91-4360-b9db-dfad2dd8261b"
+    },
+    "241a92d7-7753-4383-97d7-8f84e22bdb58": {
+        "book_title": "Анна Каренина",
+        "book_author": "Л.Н. Толстой",
+        "book_year": "1873",
         "book_status": "выдана",
-        "book_id": "d3f8a070-7d24-4173-af88-947269ef1bcc"
+        "book_id": "241a92d7-7753-4383-97d7-8f84e22bdb58"
     },
-    "01f06234-6520-40cf-ab14-614ffaad829b": {
+    "d797f04e-f37e-4973-9628-613befd538bc": {
         "book_title": "123",
         "book_author": "123",
         "book_year": "123",
         "book_status": "в наличии",
-        "book_id": "01f06234-6520-40cf-ab14-614ffaad829b"
-    },
-    "4396e584-9abf-41c8-9c8c-bb32fe11245e": {
-        "book_title": "123",
-        "book_author": "123",
-        "book_year": "123",
-        "book_status": "в наличии",
-        "book_id": "4396e584-9abf-41c8-9c8c-bb32fe11245e"
-    },
-    "20599664-4e48-4b96-9222-821b3dd0a76e": {
-        "book_title": "123",
-        "book_author": "123",
-        "book_year": "123",
-        "book_status": "в наличии",
-        "book_id": "20599664-4e48-4b96-9222-821b3dd0a76e"
-    },
-    "fd80ca42-4a0c-42b4-9b96-ecf54d8708bd": {
-        "book_title": "111",
-        "book_author": "111",
-        "book_year": "111",
-        "book_status": "выдана",
-        "book_id": "fd80ca42-4a0c-42b4-9b96-ecf54d8708bd"
+        "book_id": "d797f04e-f37e-4973-9628-613befd538bc"
     }
 }

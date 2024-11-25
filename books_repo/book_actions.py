@@ -28,21 +28,25 @@ class ActionBook:
             print("Ошибка! Автор и название не могут быть пустыми!")
 
     # Удаление книги по id
-    def delete_book(
-        self,
-    ) -> None:
+    def delete_book(self) -> None:
+        book_id: str = input("Введите id книги: ")
+
         try:
-            book_id: str = input("Введите id книги: ")
+
             self.book_storage.storage.pop(book_id)
+
             print(f"Книга с id {book_id} удалена!")
             self.book_storage.set_storage()
+
         except KeyError:
             print(f"Книга с id {book_id} не найдена!")
 
     # Поиск книги по автору, названию или году выпуска
     def find_book(self) -> None:
+        book_for_find: str = input("Введите название, автора или год книги: ")
+
         try:
-            book_for_find: str = input("Введите название, автора или год книги: ")
+
             coincidence: bool = False
             print(f"Книга по запросу {book_for_find}")
 
@@ -55,8 +59,10 @@ class ActionBook:
 
                         coincidence = True
                         break
+
             if not coincidence:
                 print("Книга не найдена\n")
+
         except ValueError:
             print("Недопустимое значение для полей название, автор, год.")
 
